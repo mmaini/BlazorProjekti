@@ -1,0 +1,24 @@
+﻿@*možemo imati više ruta za istu komponentu*@
+
+@page "/learnRouting"
+@page "/learnNewRouting"
+@page "/learnNewRouting/{param1}"
+@page "/learnNewRouting/{param1}/{param2}"
+
+@*Primjeri poziva*@
+@*https://localhost:44365/learnNewRouting/aaa/bbb*@
+@*https://localhost:44365/learnNewRouting/aaa*@
+@*https://localhost:44365/learnNewRouting*@
+@*https://localhost:44365/learnRouting*@
+
+<h3>Learn Routing</h3>
+
+<p>Prvi parametar: @Param1</p>
+<p>Drugi parametar: @Param2</p>
+
+@code {
+    [Parameter]
+    public string Param1 { get; set; }
+    [Parameter]
+    public string Param2 { get; set; }
+}

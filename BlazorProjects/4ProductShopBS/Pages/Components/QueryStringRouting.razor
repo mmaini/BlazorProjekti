@@ -1,0 +1,26 @@
+﻿@page "/querystringrouting"
+@*Ubacujemo već postojeći servis- omogućeno preko DI*@
+@inject NavigationManager NavigationManager
+
+<h3>QueryString Routing</h3>
+
+<p>Prvi parametar: @Param1</p>
+<p>Drugi parametar: @Param2</p>
+<p><button @onclick="LoadParameters">Učitaj parametre</button></p>
+
+@code {
+
+    string Param1;
+    string Param2;
+    private void LoadParameters()
+    {
+        //dohvatimo url
+        var absoluteUri = new Uri(NavigationManager.Uri);
+        //dohvatimo parametre u kolekciju
+        var queryParam = System.Web.HttpUtility.ParseQueryString(absoluteUri.Query);
+        //učitamo parametr
+        Param1 = queryParam["Param1"];
+        Param2 = queryParam["Param2"];
+
+    }
+}

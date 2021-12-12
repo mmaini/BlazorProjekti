@@ -1,0 +1,23 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading alert alert-info">@Title</div>
+    <div class="panel-body alert alert-success">@ChildContent</div>
+
+    @*definiramo da na klik buttona želimo izvršiti metodu koja nam je proslijeđena iz parenta*@
+    <button class="btn btn-danger" @onclick="OnClickMethod">
+        Klikni me
+    </button>
+</div>
+
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    //RenderFramegment predstavlja komadić UI kojeg je potrebno izrenderirati
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    //EventCallback je mehanizam kojim se neka metoda "prijavi" da se izvrši nakon nekog događaja, u ovom slučaju klik na button
+    public EventCallback OnClickMethod { get; set; }
+
+}

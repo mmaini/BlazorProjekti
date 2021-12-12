@@ -1,0 +1,64 @@
+﻿<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">4ProductShopBS</a>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <AuthorizeView>
+            <Authorized>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="category">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Kategorija
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="product">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Proizvod
+                    </NavLink>
+                </li>
+            </Authorized>
+            <NotAuthorized>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="learnBlazor">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Learn Blazor
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="learnRouting">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Learn Routing
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="querystringrouting?param1=prvi&param2=drugi">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> QueryString Routing
+                    </NavLink>
+                </li>
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="parentComponent">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span> Parent-Child
+                    </NavLink>
+                </li>
+            </NotAuthorized>
+        </AuthorizeView>
+
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

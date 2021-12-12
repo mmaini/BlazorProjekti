@@ -1,0 +1,24 @@
+﻿@page "/parentComponent"
+
+<h1 class="text-danger">Parent Child Component</h1>
+
+@*ubacujemo child komponentu*@
+@*Child komponenta ima property Title i na ovaj način možemo proslijediti vrijednost*@
+@*Iz Parent komponente proslijeđujemo koja se metoda treba izvršiti na klik buttona*@
+<ChildComponent 
+                OnClickMethod="@ShowMessage"
+                Title="Naslov iz parent komponente">
+    Ovo je tekst upisan između ChildComponent tagova
+    </ChildComponent>
+
+<p><b>@messageText</b></p>
+
+@code {
+
+    private string messageText;
+
+    private void ShowMessage()
+    {
+        messageText = "Pozdrav iz parenta";
+    }
+}

@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        @*ubacivanje navigacijske komponente*@
+        <NavMenu />
+    </div>
+
+    <div class="main">
+        <div class="top-row px-4 auth" style="background-color:#05163D">
+            @*ubacivanje login komponente*@
+            <LoginDisplay />
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>

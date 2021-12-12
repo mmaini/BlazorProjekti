@@ -1,0 +1,11 @@
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\bin\Debug\net5.0\3BlazorCoreHostedApp.Shared.deps.json
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\bin\Debug\net5.0\3BlazorCoreHostedApp.Shared.dll
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\bin\Debug\net5.0\ref\3BlazorCoreHostedApp.Shared.dll
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\bin\Debug\net5.0\3BlazorCoreHostedApp.Shared.pdb
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\3BlazorCoreHostedApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\3BlazorCoreHostedApp.Shared.AssemblyInfoInputs.cache
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\3BlazorCoreHostedApp.Shared.AssemblyInfo.cs
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\3BlazorCoreHostedApp.Shared.csproj.CoreCompileInputs.cache
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\3BlazorCoreHostedApp.Shared.dll
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\ref\3BlazorCoreHostedApp.Shared.dll
+C:\DOKUMENTACIJA\FAX\PROJEKTI\BlazorProjects\BlazorProjects\3BlazorCoreHostedApp\Shared\obj\Debug\net5.0\3BlazorCoreHostedApp.Shared.pdb

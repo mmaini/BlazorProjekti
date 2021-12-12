@@ -1,0 +1,20 @@
+﻿@page "/learnBlazor"
+
+
+<p>Primjer one-way bindinga - U naslovu se vrijednost iz koda</p>
+<h3 class="text-info pb-3">@dobrodoslica</h3>
+<hr />
+
+
+<p>Primjer two-way bindinga - ono što se upiše u input prikazat će se u poruci ispod</p>
+@*oninput omogućava da se odmah vidi promjena, inače moramo kliknuti negdje izvan inputa*@
+<p>2 way binding &nbsp; <input @bind="name" @bind:event="oninput" /></p>
+<p>Iz inputa: @name</p>
+
+<hr />
+<p>Klikom na dugme promijenimo vrijednost</p>
+<p><button @onclick="GetName">Klikni me</button></p>
+
+@code{
+    @*možemo imati kod ovdje ili u posebnom file-u (LearnBlazor.razor.cs) - naziv je bitan*@
+}

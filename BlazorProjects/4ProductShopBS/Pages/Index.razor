@@ -1,0 +1,22 @@
+﻿@page "/"
+@inject ProductService ProductService
+
+
+<div class="row">
+    @foreach(var product in productList)
+            {
+        <IndividualProduct product="product"></IndividualProduct>
+            }
+</div>
+
+
+@code{
+    List<Product> productList = new List<Product>();
+
+    protected override void OnInitialized()
+    {
+        productList = ProductService.GetProducts();
+    }
+}
+
+
