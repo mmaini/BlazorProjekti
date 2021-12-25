@@ -1,0 +1,23 @@
+﻿@page "/bookings/create/"
+
+@inject HttpClient _client
+@inject NavigationManager _navManager
+
+<h3 class="card-title">Unos nove rezervacije</h3>
+
+<FormComponent ButtonText="Spremi rezervaciju" OnValidSubmit="@CreateBooking" booking="booking" />
+
+@code {
+    Booking booking = new Booking
+    {
+        DateOut = DateTime.Now.Date
+    };
+
+
+    private async Task CreateBooking()
+    {
+        await _client.PostAsJsonAsync(Endpoints.BookingsEndpoint, booking);
+        _navManager.NavigateTo("/bookings/");
+    }
+
+}

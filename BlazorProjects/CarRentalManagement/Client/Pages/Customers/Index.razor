@@ -1,0 +1,55 @@
+﻿@page "/customers/"
+@attribute [Authorize]
+    <HeadingComponent Text="Stranke" />
+    <br />
+    <a href="/customers/create" class="btn btn-secondary">
+        <span class="oi oi-plus"></span>
+        Unos nove stranke
+    </a>
+    <br />
+    <br />
+    @if (Customers == null)
+    {
+        <div class="alert alert-info">Učitavanje stranaka...</div>
+    }
+    else
+    {
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>Ime i prezime</th>
+                    <th>Kontakt broj</th>
+                    <th>Email adresa</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Customers)
+                {
+                    <tr>
+                        <td>@customer.FirstName @customer.LastName</td>
+                        <td>@customer.ContactNumber</td>
+                        <td>@customer.EmailAddress</td>
+                        <td>
+                            <a href="/customers/view/@customer.Id" class="btn btn-primary">
+                                <span class="oi oi-book"></span>
+                            </a>
+                            <a href="/customers/edit/@customer.Id" class="btn btn-warning">
+                                <span class="oi oi-pencil"></span>
+                            </a>
+                            <button class="btn btn-danger" @onclick="@(()=>Delete(customer.Id))">
+                                <span class="oi oi-delete"></span>
+                            </button>
+
+                        </td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    }
+
+
+    @code {
+        
+    }
